@@ -39,6 +39,7 @@ img {
 a {
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* Utils */
