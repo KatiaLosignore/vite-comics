@@ -40,7 +40,13 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+    @mixin center-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     nav {
         display: flex;
@@ -50,29 +56,33 @@ export default {
     header {
         padding-top: 20px;
         height: 150px;
-        background-color: white;
     }
+
     ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-flex;
         margin: 30px;
         padding: 0;
+
+        li {
+            list-style-type: none;
+            font-weight: bold;
+            font-size: 13px;
+
+            a {
+                padding: 10px;
+                text-transform: uppercase;
+
+                &.active {
+                    color: blue;
+                    padding-bottom: 65px;
+                     border-bottom: 4px solid blue;
+                }
+            }
+
+        }
+
+
     }
 
-    ul li {
-        list-style-type: none;
-        font-weight: bold;
-        font-size: 13px;
-    }
 
-    ul li a {
-        padding: 10px;
-    }
-
-    ul li a.active {
-        color: blue;
-        padding-bottom: 50px;
-        border-bottom: 4px solid blue;
-    }
 </style>

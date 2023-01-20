@@ -1,20 +1,22 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'ViteComics',
-  components: { AppHeader }
+  components: { AppHeader, AppMain, AppFooter }
 }
 
 </script>
 
 <template>
   <app-header></app-header>
-  <main></main>
-  <footer></footer>
+  <app-main></app-main>
+  <app-footer></app-footer>
 
 </template>
 
-<style>
+<style lang="scss">
 /* Reset */
 * {
   margin: 0;
@@ -25,10 +27,7 @@ export default {
 /* Generics */
 body {
   font-family: 'Open Sans', sans-serif;
-  min-height: 100vh;
-  /* background-image: url('./assets/img/jumbotron.jpg');
-  background-position: center;
-  background-repeat: no-repeat; */
+  height: 100vh;
 }
 
 img {
@@ -39,7 +38,7 @@ img {
 a {
   color: black;
   text-decoration: none;
-  text-transform: uppercase;
+
 }
 
 /* Utils */
