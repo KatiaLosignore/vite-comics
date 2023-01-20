@@ -17,33 +17,5 @@ export default {
 </template>
 
 <style lang="scss">
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Generics */
-body {
-  font-family: 'Open Sans', sans-serif;
-  height: 100vh;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-
-}
-
-/* Utils */
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-}
+@use './assets/scss/style.scss';
 </style>

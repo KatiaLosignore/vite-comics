@@ -60,56 +60,67 @@ export default {
                     </div>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer-col-img">
                     <img src="../assets/img/dc-logo-bg.png" alt="logo">
                 </div>
     
             </nav>
         </div>
-            <nav class="footer-bottom">
-                
-                <div class="footer-col">
-                    <h5>SIGN-UP NOW!</h5>
-                </div>
-                <div class="footer-col">
-                    <ul>
-                        <li class="follow">FOLLOW US</li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-           
-                     
-                    </ul>
-    
-                </div>
-            </nav>
 
-       
+        <div class="footer-bottom">
+
+            <div class="container">
+                <nav class="footer-nav-bottom">
+                    <h5>SIGN-UP NOW!</h5>
+                
+                    <ul>
+                        <li><a href="#" class="special">FOLLOW US</a></li>
+                        <li><img src="../assets/img/footer-facebook.png" alt=""></li>
+                        <li><img src="../assets/img/footer-twitter.png" alt=""></li>
+                        <li><img src="../assets/img/footer-youtube.png" alt=""></li>
+                        <li><img src="../assets/img/footer-pinterest.png" alt=""></li>
+                        <li><img src="../assets/img/footer-periscope.png" alt=""></li>
+                    </ul>
+                </nav>
+                
+            </div>
+
+        </div>        
+
     </footer>
 
 
 </template>
 
 <style scoped>
+
     footer {                   
-        padding-top: 120px;
+        padding-top: 200px;
         background-image: url('../assets/img/footer-bg.jpg');
         background-position: bottom;
-        height: 600px;
+        height: 960px;
     }
     
     .footer-nav {
         display: flex;
         justify-content: space-between;
         margin-bottom: 3rem;
-        width: 80%;
+        width: 100%;
     }
 
     .footer-col {
-        flex-basis: calc(100% / 4);
         display: flex;
         justify-content: space-between;
         padding: 0 1rem;
+        width: 15%;
+    }
+
+    .footer-col-img {
+        width: 50%;
+    }
+
+    .footer-col-img img{
+        height: 126%;
     }
 
     .footer-col h4 {
@@ -140,40 +151,51 @@ export default {
     }
 
     .footer-bottom {
+        position: relative;
+        z-index: 1;
         background-color: rgb(48,48,48);
-        height: 90px;
-        display: flex;
-        justify-content: space-between;
+        height: 100px;
         width: 100%;
     }
-    .footer-bottom ul {
+
+    .footer-nav-bottom {
         display: flex;
         justify-content: space-between;
+    }
+
+    .footer-nav-bottom ul{
+        display: flex;
+        justify-content: center;
         align-items: center;
+        margin: 30px;
+        padding: 0;
     }
 
-    .footer-bottom ul li {
-        margin: 0 5px;
+    .footer-nav-bottom ul li {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 13px;
     }
 
-    .footer-col h5 {
-        font-weight: 600;
-        font-size: 1rem;
+    .footer-nav-bottom h5 {
         color: white;
-        padding: 30px;
-        margin-left: 200px;
+        cursor: pointer;
+        margin-top: 30px;
+        height: 37px;
+        padding: 8px;
+        border: 2px solid rgb(2,130,249);
     }
 
-    .footer-col img {
-        height: 400px;
-    }
-    .footer-col i {
-        font-size: 23px;
-        margin: 0 5px;
-    }
-
-    .follow {
+    li a.special {
         color: rgb(2,130,249);
-        font-weight: 600;
+        font-size: 15px;
+        margin-right: 10px;
     }
+
+    ul li img {
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+
 </style>
