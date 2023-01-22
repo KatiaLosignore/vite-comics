@@ -4,13 +4,13 @@
         data() {
             return {
                 images: [
-                    { text: 'digital comics', url: '#', image: 'buy-comics-digital-comics.png' },
-                    { text: 'dc merchandise', url: '#', image: 'buy-comics-merchandise.png' },
-                    { text: 'subscription', url: '#', image: 'buy-comics-subscriptions.png' },
-                    { text: 'comic shop locator', url: '#', image: 'buy-comics-shop-locator.png' },
-                    { text: 'dc power visa', url: '#', image: 'buy-dc-power-visa.svg' },
+                    { id: 1, text: 'digital comics', url: '#', image: 'buy-comics-digital-comics.png' },
+                    { id: 2, text: 'dc merchandise', url: '#', image: 'buy-comics-merchandise.png' },
+                    { id: 3, text: 'subscription', url: '#', image: 'buy-comics-subscriptions.png' },
+                    { id: 4, text: 'comic shop locator', url: '#', image: 'buy-comics-shop-locator.png' },
+                    { id: 5, text: 'dc power visa', url: '#', image: 'buy-dc-power-visa.svg' }, 
 
-                ]
+                ],
             }
         },
         methods: {
@@ -25,9 +25,9 @@
 <template>
     <div>
         <ul>
-            <li v-for="image in images" :key="image.text">
+            <li v-for="image in images" :key="image.id">
                 <a :href="image.url">
-                    <img :src="buildImagePath(image)">
+                    <img :src="buildImagePath(image)" :class="{'img-width' : image.id === 4, 'img-first' : image.id === 1, 'img-last' : image.id === 5}">
                     <p>{{image.text}}</p>
                 </a>
             </li>
@@ -45,7 +45,7 @@
         position: relative;
         z-index: 2;
         background-color: $blue;
-        height: 150px;
+        height: 130px;
     }
 
     ul {
@@ -69,8 +69,20 @@
     }
 
     img {
-        width: 45px;
+        width: 50px;
         margin-right: 10px;
         object-fit: cover;
+    }
+
+    .img-width {
+        width : 30px;
+    }
+
+    .img-first {
+        width: 40px;
+    }
+
+    .img-last {
+        width: 55px;
     }
 </style>
