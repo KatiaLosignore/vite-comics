@@ -140,13 +140,13 @@ export default {
 
 
     .footer-col-img {
-        width: 50%;
+        width: 60%;
 
         img{
         height: 126%;
         position: absolute;
         z-index: 1;
-        right: 100px;
+        right: 150px;
         top: -95px;
         }
     }
