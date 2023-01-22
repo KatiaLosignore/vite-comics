@@ -92,109 +92,112 @@ export default {
 
 </template>
 
-<style scoped>
+<style  lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/mixins' as *;
 
     footer {                   
-        padding-top: 200px;
         background-image: url('../assets/img/footer-bg.jpg');
         background-position: bottom;
-        height: 960px;
+        height: 450px;
+        position: relative;
     }
     
     .footer-nav {
-        display: flex;
-        justify-content: space-between;
+        @include between_flex;
         margin-bottom: 3rem;
         width: 100%;
-    }
 
-    .footer-col {
+        .footer-col {
         display: flex;
-        justify-content: space-between;
         padding: 0 1rem;
         width: 15%;
+        }
+            h4 {
+            font-weight: 600;
+            font-size: 1rem;
+            padding-top: 50px;
+            margin-bottom: 1rem;
+            color: $white;
+            }
+
+            ul {
+            list-style-type: none;
+            }
+      
+            .special {
+                padding-top: 20px;
+            }
+
+                li a {
+                   display: inline-block;
+                   margin-bottom: 0.25rem;
+                   font-size: 13px;
+                   color: $grey;
+                }
+
     }
+
 
     .footer-col-img {
         width: 50%;
-    }
 
-    .footer-col-img img{
+        img{
         height: 126%;
+        position: absolute;
+        z-index: 1;
+        right: 100px;
+        top: -95px;
+        }
     }
 
-    .footer-col h4 {
-        font-weight: 600;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        color: white;
-    }
 
-    .special {
-        margin-top: 15px;
-    }
 
-    .footer col ul li a.follow {
-        font-size: 100px;
-        font-weight: 600;
-    }
-
-    .footer-col ul {
-        list-style-type: none;
-    }
-
-    .footer-col ul li a {
-        display: inline-block;
-        margin-bottom: 0.25rem;
-        font-size: 13px;
-        color: darkgrey;
-    }
-
+    
     .footer-bottom {
         position: relative;
-        z-index: 1;
-        background-color: rgb(48,48,48);
+        z-index: 2;
+        background-color: $dark_grey;
         height: 100px;
         width: 100%;
     }
 
+
     .footer-nav-bottom {
-        display: flex;
-        justify-content: space-between;
-    }
+        @include between_flex;
 
-    .footer-nav-bottom ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px;
-        padding: 0;
-    }
-
-    .footer-nav-bottom ul li {
-        list-style-type: none;
-        font-weight: bold;
-        font-size: 13px;
-    }
-
-    .footer-nav-bottom h5 {
-        color: white;
+        h5 {
+        color: $white;
         cursor: pointer;
         margin-top: 30px;
         height: 37px;
         padding: 8px;
-        border: 2px solid rgb(2,130,249);
-    }
+        border: 2px solid $blue;
+        }
 
-    li a.special {
-        color: rgb(2,130,249);
-        font-size: 15px;
-        margin-right: 10px;
-    }
+        ul{
+        @include center_flex;
+        margin: 30px;
+        padding: 0;
+        }
 
-    ul li img {
-        margin: 0 10px;
-        cursor: pointer;
+            li {
+            list-style-type: none;
+            font-weight: bold;
+            font-size: 13px;
+            }
+                a.special {
+                color: $blue;
+                font-size: 15px;
+                margin-right: 10px;
+                }
+
+                ul li img {
+                margin: 0 10px;
+                cursor: pointer;
+                }
+
+
     }
 
 

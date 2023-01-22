@@ -17,16 +17,16 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
 
     #comics {
-        background-color: black;
+        background-color: $black;
         height: 110px;
-
     }
 
     h2{
-        color: white;
+        color: $white;
         padding: 35px;
     }
 

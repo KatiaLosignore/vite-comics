@@ -41,12 +41,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
-    @mixin center-flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
+   
 
     nav {
         display: flex;
@@ -59,7 +56,7 @@ export default {
     }
 
     ul {
-        @include center-flex;
+        @include center_flex;
         margin: 30px;
         padding: 0;
 
@@ -73,9 +70,9 @@ export default {
                 text-transform: uppercase;
 
                 &.active {
-                    color: blue;
+                    color: $blue;
                     padding-bottom: 65px;
-                     border-bottom: 4px solid blue;
+                    border-bottom: 4px solid $blue;
                 }
             }
 
