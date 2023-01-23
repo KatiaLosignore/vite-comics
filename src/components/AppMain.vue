@@ -16,7 +16,9 @@ export default {
         </section>
         <div class="container">
             <section id="cards">
-                
+                <div class="button-ser">
+                    <div class="series">current series</div>
+                </div>
                 <ul>
                     <li v-for="card in cards" :key="card.series">
                         <img :src="card.thumb" :alt="card.type">
@@ -39,12 +41,33 @@ export default {
 
     #comics {
         background-color: $black;
-        height: 960px;
+        height: 990px;  
     }
 
-   #cards {
-    padding-top: 30px;
-   }
+    #cards {
+        position: relative;
+       
+        .button-ser {
+            margin: 25px auto;
+            padding: 14px;
+            width: 190px;
+            border-radius: 18px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+
+            .series {
+            background-color: $blue;
+            padding: 13px;
+            color: $white;
+            text-align: center;
+            position: absolute;
+            top: -45px;
+            left: 23px;
+            }
+        }
+    }
 
     ul {
         @include center_flex;
@@ -59,7 +82,6 @@ export default {
             color: $white;
             text-transform: uppercase;
             width: 15%;
-            margin: 10px 0;
         }
 
             img {
@@ -78,7 +100,7 @@ export default {
         background-image: url('../assets/img/jumbotron.jpg');
         background-size: cover;
         background-position: top;
-        height: 320px;
+        height: 350px;
     }
 
 </style>

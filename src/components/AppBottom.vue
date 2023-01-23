@@ -23,12 +23,14 @@ export default {
     border-radius: 18px;
     font-size: 11px;
     font-weight: 600;
-}
-.load-button {
-    background-color: $blue;
-    padding: 10px;
-    color: white;
-    text-align: center;
+    cursor: pointer;
+
+    .load-button {
+        background-color: $blue;
+        padding: 10px;
+        color: $white;
+        text-align: center;
+    }
 }
 
 </style>
